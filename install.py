@@ -17,7 +17,7 @@ class Timer:
         return self.stop.strftime("%H:%M:%S")
 
 def pip_check():
-    pip_check = subprocess.run([f"pip3 --version"], stdout=subprocess.DEVNULL, stderr=subprocess.PIPE, shell=True)
+    pip_check = subprocess.run([f"pip3 --version"],  stderr=subprocess.PIPE, shell=True)
     if pip_check.returncode == 0:
         print("[+] pip is already installed.")
         return True
@@ -25,14 +25,14 @@ def pip_check():
     return False
 
 def install_pip():
-    install_check = subprocess.run([f"sudo apt install python3-pip"], stdout=subprocess.DEVNULL, stderr=subprocess.PIPE, shell=True)
+    install_check = subprocess.run([f"sudo apt install python3-pip"],  stderr=subprocess.PIPE, shell=True)
     if install_check.returncode == 0:
         print("[+] pip was installed successfully!")
     else:
         print("[!] Something went wrong!  pip was NOT installed successfully...")  
 
 def flask_cors_check():
-    flask_cors_check = subprocess.run([f"pip3 show flask_cors"], stdout=subprocess.DEVNULL, stderr=subprocess.PIPE, shell=True)
+    flask_cors_check = subprocess.run([f"pip3 show flask_cors"],  stderr=subprocess.PIPE, shell=True)
     if flask_cors_check.returncode == 0:
         print("[+] Flask_CORS is already installed.")
         return True
@@ -40,14 +40,14 @@ def flask_cors_check():
     return False
 
 def install_flask_cors():
-    install_check = subprocess.run([f"sudo apt install python3-flask-cors"], stdout=subprocess.DEVNULL, stderr=subprocess.PIPE, shell=True)
+    install_check = subprocess.run([f"sudo apt install python3-flask-cors"],  stderr=subprocess.PIPE, shell=True)
     if install_check.returncode == 0:
         print("[+] Flask_CORS was installed successfully!")
     else:
         print("[!] Something went wrong!  Flask_CORS was NOT installed successfully...")    
 
 def awscli_check():
-    flask_cors_check = subprocess.run([f"aws --version"], stdout=subprocess.DEVNULL, stderr=subprocess.PIPE, shell=True)
+    flask_cors_check = subprocess.run([f"aws --version"],  stderr=subprocess.PIPE, shell=True)
     if flask_cors_check.returncode == 0:
         print("[+] AWS CLI is already installed.")
         return True
@@ -63,7 +63,7 @@ def install_awscli():
 
 def tools_dir_check():
     home_dir = get_home_dir()
-    go_check = subprocess.run([f"ls {home_dir}/Tools"], stdout=subprocess.DEVNULL, stderr=subprocess.PIPE, shell=True)
+    go_check = subprocess.run([f"ls {home_dir}/Tools"],  stderr=subprocess.PIPE, shell=True)
     if go_check.returncode == 0:
         print("[+] Tools folder was found.")
         return True
@@ -81,7 +81,7 @@ def create_tools_dir():
         exit()
 
 def go_check():
-    go_check = subprocess.run(["go version"], stdout=subprocess.DEVNULL, stderr=subprocess.PIPE, shell=True)
+    go_check = subprocess.run(["go version"],  stderr=subprocess.PIPE, shell=True)
     if go_check.returncode == 0:
         print("[+] Go is already installed.")
         return True
@@ -90,7 +90,7 @@ def go_check():
 
 def sublist3r_check():
     home_dir = get_home_dir()
-    sublist3r_check = subprocess.run([f"python3 {home_dir}/Tools/Sublist3r/sublist3r.py --help"], stdout=subprocess.DEVNULL, stderr=subprocess.PIPE, shell=True)
+    sublist3r_check = subprocess.run([f"python3 {home_dir}/Tools/Sublist3r/sublist3r.py --help"],  stderr=subprocess.PIPE, shell=True)
     if sublist3r_check.returncode == 0:
         print("[+] Sublist3r is already installed.")
         return True
@@ -108,7 +108,7 @@ def install_sublist3r():
 
 def assetfinder_check():
     home_dir = get_home_dir()
-    assetfinder_check = subprocess.run([f"{home_dir}/go/bin/assetfinder --help"], stdout=subprocess.DEVNULL, stderr=subprocess.PIPE, shell=True)
+    assetfinder_check = subprocess.run([f"{home_dir}/go/bin/assetfinder --help"],  stderr=subprocess.PIPE, shell=True)
     if assetfinder_check.returncode == 0:
         print("[+] Assetfinder is already installed.")
         return True
@@ -126,7 +126,7 @@ def install_assetfinder():
 
 def gau_check():
     home_dir = get_home_dir()
-    gau_check = subprocess.run([f"{home_dir}/go/bin/gau --help"], stdout=subprocess.DEVNULL, stderr=subprocess.PIPE, shell=True)
+    gau_check = subprocess.run([f"{home_dir}/go/bin/gau --help"],  stderr=subprocess.PIPE, shell=True)
     if gau_check.returncode == 0:
         print("[+] Gau is already installed.")
         return True
@@ -144,7 +144,7 @@ def install_gau():
 
 def shosubgo_check():
     home_dir = get_home_dir()
-    shosubgo_check = subprocess.run([f"{home_dir}/go/bin/shosubgo --help"], stdout=subprocess.DEVNULL, stderr=subprocess.PIPE, shell=True)
+    shosubgo_check = subprocess.run([f"{home_dir}/go/bin/shosubgo --help"],  stderr=subprocess.PIPE, shell=True)
     if shosubgo_check.returncode == 0:
         print("[+] Shosubgo is already installed.")
         return True
@@ -162,7 +162,7 @@ def install_shosubgo():
 
 def crt_check():
     home_dir = get_home_dir()
-    crt_check = subprocess.run([f"ls {home_dir}/Tools/tlshelpers/"], stdout=subprocess.DEVNULL, stderr=subprocess.PIPE, shell=True)
+    crt_check = subprocess.run([f"ls {home_dir}/Tools/tlshelpers/"],  stderr=subprocess.PIPE, shell=True)
     if crt_check.returncode == 0:
         print("[+] TLSHelpers is already installed.")
         return True
@@ -180,7 +180,7 @@ def install_crt():
 
 def subfinder_check():
     home_dir = get_home_dir()
-    subfinder_check = subprocess.run([f"{home_dir}/go/bin/subfinder --help"], stdout=subprocess.DEVNULL, stderr=subprocess.PIPE, shell=True)
+    subfinder_check = subprocess.run([f"{home_dir}/go/bin/subfinder --help"],  stderr=subprocess.PIPE, shell=True)
     if subfinder_check.returncode == 0:
         print("[+] Subfinder is already installed.")
         return True
@@ -198,7 +198,7 @@ def install_subfinder():
 
 def gospider_check():
     home_dir = get_home_dir()
-    gospider_check = subprocess.run([f"{home_dir}/go/bin/gospider --help"], stdout=subprocess.DEVNULL, stderr=subprocess.PIPE, shell=True)
+    gospider_check = subprocess.run([f"{home_dir}/go/bin/gospider --help"],  stderr=subprocess.PIPE, shell=True)
     if gospider_check.returncode == 0:
         print("[+] GoSpider is already installed.")
         return True
@@ -216,7 +216,7 @@ def install_gospider():
 
 def subdomainizer_check():
     home_dir = get_home_dir()
-    subdomainizer_check = subprocess.run([f"ls {home_dir}/Tools/SubDomainizer/"], stdout=subprocess.DEVNULL, stderr=subprocess.PIPE, shell=True)
+    subdomainizer_check = subprocess.run([f"ls {home_dir}/Tools/SubDomainizer/"],  stderr=subprocess.PIPE, shell=True)
     if subdomainizer_check.returncode == 0:
         print("[+] SubDomainizer is already installed.")
         return True
@@ -235,7 +235,7 @@ def install_subdomainizer():
 
 def shuffledns_check():
     home_dir = get_home_dir()
-    shuffledns_check = subprocess.run([f"{home_dir}/go/bin/shuffledns --help"], stdout=subprocess.DEVNULL, stderr=subprocess.PIPE, shell=True)
+    shuffledns_check = subprocess.run([f"{home_dir}/go/bin/shuffledns --help"],  stderr=subprocess.PIPE, shell=True)
     if shuffledns_check.returncode == 0:
         print("[+] ShuffleDNS is already installed.")
         return True
@@ -253,7 +253,7 @@ def install_shuffledns():
 
 def httprobe_check():
     home_dir = get_home_dir()
-    httprobe_check = subprocess.run([f"{home_dir}/go/bin/httprobe --help"], stdout=subprocess.DEVNULL, stderr=subprocess.PIPE, shell=True)
+    httprobe_check = subprocess.run([f"{home_dir}/go/bin/httprobe --help"],  stderr=subprocess.PIPE, shell=True)
     if httprobe_check.returncode == 0:
         print("[+] Httprobe is already installed.")
         return True
@@ -271,7 +271,7 @@ def install_httprobe():
 
 def tlsscan_check():
     home_dir = get_home_dir()
-    tlsscan_check = subprocess.run([f"ls {home_dir}/Tools/tls-scan/tls-scan"], stdout=subprocess.DEVNULL, stderr=subprocess.PIPE, shell=True)
+    tlsscan_check = subprocess.run([f"ls {home_dir}/Tools/tls-scan/tls-scan"],  stderr=subprocess.PIPE, shell=True)
     if tlsscan_check.returncode == 0:
         print("[+] TLS-Scan is already installed.")
         return True
@@ -288,7 +288,7 @@ def install_tlsscan():
         print("[!] Something went wrong!  TLS-Scan was NOT installed successfully...")
 
 def jq_check():
-    jq_check = subprocess.run([f"jq --help"], stdout=subprocess.DEVNULL, stderr=subprocess.PIPE, shell=True)
+    jq_check = subprocess.run([f"jq --help"],  stderr=subprocess.PIPE, shell=True)
     if jq_check.returncode == 0:
         print("[+] JQ is already installed.")
         return True
@@ -305,7 +305,7 @@ def install_jq():
 
 def dnmasscan_check():
     home_dir = get_home_dir()
-    dnmasscan_check = subprocess.run([f"ls {home_dir}/Tools/dnmasscan/"], stdout=subprocess.DEVNULL, stderr=subprocess.PIPE, shell=True)
+    dnmasscan_check = subprocess.run([f"ls {home_dir}/Tools/dnmasscan/"],  stderr=subprocess.PIPE, shell=True)
     if dnmasscan_check.returncode == 0:
         print("[+] DNMasscan is already installed.")
         return True
@@ -323,7 +323,7 @@ def install_dnmasscan():
 
 def nuclei_check():
     home_dir = get_home_dir()
-    nuclei_check = subprocess.run([f"{home_dir}/go/bin/nuclei --help"], stdout=subprocess.DEVNULL, stderr=subprocess.PIPE, shell=True)
+    nuclei_check = subprocess.run([f"{home_dir}/go/bin/nuclei --help"],  stderr=subprocess.PIPE, shell=True)
     if nuclei_check.returncode == 0:
         print("[+] Nuclei is already installed.")
         return True
@@ -424,7 +424,7 @@ def keystore():
             subprocess.run([f"""echo "{hackerone_user}:{hackerone_key}" > {home_dir}/.keys/.hackerone && echo "{slack_key}" > {home_dir}/.keys/slack_web_hook && echo "github:{github_key}" > {home_dir}/.keys/.keystore && echo "shodan:{shodan_key}" >> {home_dir}/.keys/.keystore"""], shell=True)
 
 def server_check():
-    server_check = subprocess.run([f"ls server/node_modules"], stdout=subprocess.DEVNULL, stderr=subprocess.PIPE, shell=True)
+    server_check = subprocess.run([f"ls server/node_modules"],  stderr=subprocess.PIPE, shell=True)
     if server_check.returncode == 0:
         print("[+] The Ars0n Framework Server is already installed.")
         return True
@@ -432,7 +432,7 @@ def server_check():
     return False
 
 def client_check():
-    client_check = subprocess.run([f"ls client/node_modules"], stdout=subprocess.DEVNULL, stderr=subprocess.PIPE, shell=True)
+    client_check = subprocess.run([f"ls client/node_modules"],  stderr=subprocess.PIPE, shell=True)
     if client_check.returncode == 0:
         print("[+] The Ars0n Framework Client is already installed.")
         return True
@@ -459,7 +459,7 @@ def run_server_prompt():
         subprocess.run(["chmod 777 run.sh; ./run.sh"], shell=True)
 
 def update_apt():
-    subprocess.run(["sudo apt-get update"], stdout=subprocess.DEVNULL, shell=True)
+    subprocess.run(["sudo apt update"], shell=True)
 
 def install_protonvpn():
     home_dir = get_home_dir()
@@ -471,7 +471,7 @@ def install_protonvpn():
 
 def stray_license_file():
     home_dir = get_home_dir()
-    subprocess.run([f"rm -f {home_dir}/LICENSE* {home_dir}/README*"], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, shell=True)
+    subprocess.run([f"rm -f {home_dir}/LICENSE* {home_dir}/README*"],  stderr=subprocess.DEVNULL, shell=True)
 
 def arg_parse():
     parser = argparse.ArgumentParser()
