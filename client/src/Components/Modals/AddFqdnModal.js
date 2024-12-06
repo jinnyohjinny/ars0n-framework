@@ -103,8 +103,8 @@ const AddFqdnModal = props => {
         <div class="container-fluid">
             <div class="container mt-5">
                 <div class="text-center">
-                    <h1 class="display-4">Add FQDN</h1>
-                    <p class="lead">Select a Burp Suite config file or enter a FQDN manually</p>
+                    <h1 class="display-4">Tambah FQDN</h1>
+                    <p class="lead">Pilih file konfigurasi Burp Suite atau masukkan FQDN secara manual.</p>
                 </div>
                 <form onSubmit={handleSubmit}>
                     <div class="form-group">

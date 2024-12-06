@@ -21,10 +21,10 @@ const ACTIVE_TAB = {
     4: Ops,
     5: Core,
     6: Creative,
-    7: ComingSoon,
-    8: ComingSoon,
-    9: ComingSoon,
-    10: Logging,
+    // 7: ComingSoon,
+    // 8: ComingSoon,
+    // 9: ComingSoon,
+    7: Logging,
 }
 
 const Fqdn = props => {
@@ -40,9 +40,9 @@ const Fqdn = props => {
         "Ops Testing",
         "Core Testing",
         "Creative Testing",
-        "Chaining",
-        "Report",
-        "Resources",
+        // "Chaining",
+        // "Report",
+        // "Resources",
         "Logging"
     ]
 

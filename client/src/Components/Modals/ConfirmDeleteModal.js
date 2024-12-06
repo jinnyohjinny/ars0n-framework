@@ -3,10 +3,10 @@ import React from 'react';
 const ConfirmDeleteModal = props => {
     return (
         <>
-        <h4>Delete FQDN?</h4>
-        <h6>Deleting this FQDN will remove all data associated with it from the database.  This cannot be undone.  Are you sure?</h6>
-        <button>Confirm</button>
-        <button>Cancel</button>
+        <h4>Hapus FQDN?</h4>
+        <h6>Menghapus FQDN ini akan menghapus semua data yang terkait dengannya dari database. Tindakan ini tidak dapat dibatalkan. Apakah Anda yakin?</h6>
+        <button>Konfirmasi</button>
+        <button>Batalkan</button>
         </>
     );
 }

@@ -296,8 +296,8 @@ function App() {
                 ))}
               </select>
               {/* Add and Delete FQDN buttons */}
-              <button className="btn btn-success mr-2" onClick={addNewFqdn}>Add FQDN</button>
-              <button className="btn btn-danger" onClick={deleteFqdn}>Delete FQDN</button>
+              <button className="btn btn-success mr-2" onClick={addNewFqdn}>Tambah FQDN</button>
+              <button className="btn btn-danger" onClick={deleteFqdn}>Hapus FQDN</button>
               <div style={{ display: 'flex', alignItems: 'center', marginTop: '10px' }}>
                 <input 
                   type="checkbox" 
@@ -305,14 +305,14 @@ function App() {
                   onChange={handleScanSingleDomainChange} 
                   style={{ width: '20px', height: '20px', marginRight: '10px' }}
                 />
-                <span style={{ color: 'white' }}>Scan only selected domain</span>
+                <span style={{ color: 'white' }}>Hanya memindai domain yang dipilih</span>
               </div>
             </li>
             <li className="nav-item ml-5">
-            <h3 style={{ color: 'white' }}>Data Export</h3>
+            <h3 style={{ color: 'white' }}>Ekspor Data</h3>
             <div class="form-group">
             <label style={{ color: 'white' }}>
-              File Name:
+              Nama File:
               <input
                 className="ml-2" 
                 type="text"
@@ -326,15 +326,16 @@ function App() {
             <li className="nav-item ml-5">
             <div>
               <label style={{ color: 'white' }}>
-                <h3 style={{ color: 'white' }}>Data Import</h3>
+                <h3 style={{ color: 'white' }}>Impor Data</h3>
                 <input class="form-control" type="file" accept=".json" id="fileInput" />
               </label>
-              <button className="border border-info btn btn-primary text-secondary ml-2" onClick={handleButtonClick}>Process</button>
-              <button className="border border-info btn btn-primary text-secondary ml-2" onClick={handleUnloadButtonClick}>Unload</button>
+              <button className="border border-info btn btn-primary text-secondary ml-2" onClick={handleButtonClick}>Jalankan</button>
+              <button className="border border-info btn btn-primary text-secondary ml-2" onClick={handleUnloadButtonClick}>Hentikan</button>
+              <button className="border border-info btn btn-primary text-secondary ml-2" onClick={handleCollectScreenshotsButton}>Screenshots</button>
             </div>
             </li>
             <li>
-              <button className="border border-info btn btn-primary text-secondary m-4 p-3 ml-5" onClick={handleCollectScreenshotsButton}>Collect Screenshots</button>
+              
             </li>
           </ul>
         </div>
@@ -346,12 +347,12 @@ function App() {
 
     <div className="pl-3 p-2 navbar navbar-expand-lg bg-dark" style={{ overflow: 'auto', whiteSpace: 'nowrap' }}>
       <span style={{ display: 'block', padding: '15px', color: '#D9D9D9', width: '250px'}}>
-          Core Module: {coreModule}<br></br>
-          Target Domain: {scanDomain}
+          Modul Inti: {coreModule}<br></br>
+          Target: {scanDomain}
       </span>
       <span style={{ display: 'block', padding: '15px', color: '#D9D9D9', width: '350px'}}>
-          Scan Step: {scanStep} / {scanComplete}<br></br>
-          Current Step: {scanStepName}
+          Tahapan Pemindaian: {scanStep} / {scanComplete}<br></br>
+          Tahapan saat ini: {scanStepName}
       </span>
       <select
                 className="form-select dropdown-select mr-2"

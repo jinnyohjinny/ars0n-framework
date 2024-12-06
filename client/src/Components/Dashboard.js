@@ -260,20 +260,20 @@ const Dashboard = props => {
         <div className="bg-secondary dashboard">
             <div className="row pl-5">
                 <div className="col-4 mb-4">
-                    <h4>FQDN: <a href={"https://" + thisFqdn.fqdn}>{thisFqdn.fqdn}</a></h4>
+                    <h5>FQDN: <a href={"https://" + thisFqdn.fqdn}>{thisFqdn.fqdn}</a></h5>
                 </div>
                 <div className="col-4 mb-4">
                     {
-                        thisFqdn.targetUrls.length > 0 ? <h4>Target URL: {thisFqdn.targetUrls[0]}</h4> : <h4>Target URL: None</h4>
+                        thisFqdn.targetUrls.length > 0 ? <h5>Target URL: {thisFqdn.targetUrls[0]}</h5> : <h5>Target URL: None</h5>
                     }
                 </div>
                 <div className="col-4 mb-4">
-                    <h4>Data Last Updated: {formatUpdated}</h4>
+                    <h5>Data terakhir: {formatUpdated}</h5>
                 </div>
             </div>
             <div className="row ml-5 pl-5">
                 <div className="col-2">
-                    <h4>Subdomain Count</h4>
+                    <h5>Jumlah Subdomain</h5>
                     <ul style={{listStyleType:"none", padding:"0", margin:"0"}}>
                         <li style={{paddingTop:"10px", paddingBottom:"10px", fontSize:"20px", fontWeight:"bold"}}>Amass: {thisFqdn.recon.subdomains.amass.length}</li>
                         <h5 style={{paddingTop:"10px", fontWeight:"600"}}>Web Scraping</h5>
